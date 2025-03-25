@@ -12,7 +12,7 @@ case "$1" in
         ;;
 
     install)
-        /usr/share/wazo-clean-rabbitmq-bindings
+        bash /usr/share/wazo-clean-rabbitmq-bindings/cleanup-push-notification-bindings.sh
         ;;
 
     uninstall)
