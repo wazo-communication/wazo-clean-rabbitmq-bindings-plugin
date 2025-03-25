@@ -1,0 +1,9 @@
+name: wazo-clean-rabbitmq-bindings
+namespace: wazocommunication
+version: 1.0.0
+author: Wazo authors
+display_name: wazo-clean-rabbitmq-bindings - Clean RabbitMQ bindings for deleted users
+min_wazo_version: 24.01
+tags:
+  - debug
+homepage: https://github.com/wazo-communication/wazo-clean-rabbitmq-bindings-plugin

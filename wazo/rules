@@ -1,0 +1,26 @@
+#!/bin/sh
+# Copyright 2024-2025 The Wazo Authors  (see the AUTHORS file)
+# SPDX-License-Identifier: GPL-3.0+
+
+case "$1" in
+    build)
+        ;;
+
+    package)
+        mkdir -p "${pkgdir}/usr/share/wazo-clean-rabbitmq-bindings"
+        cp cleanup-push-notification-bindings.sh "${pkgdir}/usr/share/wazo-clean-rabbitmq-bindings/cleanup-push-notification-bindings.sh"
+        ;;
+
+    install)
+        /usr/share/wazo-clean-rabbitmq-bindings
+        ;;
+
+    uninstall)
+        rm -rf /usr/share/wazo-clean-rabbitmq-bindings
+        ;;
+
+    *)
+        echo "$0 called with unknown argument '$1'" >&2
+        exit 1
+    ;;
+esac
