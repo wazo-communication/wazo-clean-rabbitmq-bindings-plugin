@@ -1,17 +1,17 @@
-# wazo-webhookd-dedicated-exchange
+# wazo-clean-rabbitmq-bindings
 
-Makes wazo-webhookd use a separate exchange than `wazo-headers`, to reduce load on RabbitMQ
+Remove unused configuration to reduce load on RabbitMQ
 
 ## Installation
 
 ```sh
-wazo-plugind-cli -c "install git https://github.com/wazo-communication/wazo-webhookd-dedicated-exchange"
+wazo-plugind-cli -c "install git https://github.com/wazo-communication/wazo-clean-rabbitmq-bindings-plugin"
 ```
 
-`wazo-webhookd` will be restarted
+This plugin can be installed on a running instance without disruption, as it does not restart any services.
 
 ## Uninstallation
 
 ```sh
-wazo-plugind-cli -c "uninstall wazocommunication/wazo-webhookd-dedicated-exchange"
+wazo-plugind-cli -c "uninstall wazocommunication/wazo-clean-rabbitmq-bindings"
 ```
